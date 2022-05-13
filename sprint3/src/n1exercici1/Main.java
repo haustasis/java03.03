@@ -75,7 +75,7 @@ public class Main {
                         "4. Retirar flor \n" +
                         "4. Retirar decoracio \n" +
                         "4. Veure stock en quantitats \n" +
-                        "4. Veure calor total floristeria \n" +
+                        "4. Veure valor total floristeria \n" +
                         "5. Crear ticket compra \n" +
                         "5. Veure llista tickets de compra \n" +
                         "5. Visualitzar benefici floristeria \n" +
