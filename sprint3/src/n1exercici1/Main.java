@@ -42,9 +42,57 @@ EXAMPLE STOCK:
 
  */
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
 
-    public static void main(String[] args) {
+    final static ArrayList<Floristeria> llistaFloristeries = new ArrayList<>();
 
+    public static void main(String[] args) {
+        iniciAppFloristeria();
+    }
+
+    static void iniciAppFloristeria() {
+        int opcioNumUsuari = -1;
+
+        while(opcioNumUsuari != 0) {
+            printMenu();
+            opcioNumUsuari = opcioNumUsuari("Escull opcio: ");
+            operacioGestioFloristeria(opcioNumUsuari);
+        }
+    }
+
+    static void printMenu() {
+        System.out.println(
+                "\n Menu aplicació \n" +
+                        "1. Crear floristeria \n" +
+                        "2. Afegir arbre \n" +
+                        "3. Afegir flor \n" +
+                        "3. Afegir decoracio \n" +
+                        "3. Veure stock detallat floristeria \n" +
+                        "3. Retirar arbre \n" +
+                        "4. Retirar flor \n" +
+                        "4. Retirar decoracio \n" +
+                        "4. Veure stock en quantitats \n" +
+                        "4. Veure calor total floristeria \n" +
+                        "5. Crear ticket compra \n" +
+                        "5. Veure llista tickets de compra \n" +
+                        "5. Visualitzar benefici floristeria \n" +
+                        "0. Sortir aplicacio"
+        );
+    }
+
+    private static void operacioGestioFloristeria(int opcioNumUsuari) {
+
+    }
+
+    static int opcioNumUsuari(String msg) {
+        System.out.println(msg);
+        int opcioNumUsuari = -1;
+        Scanner sc = new Scanner(System.in);
+        opcioNumUsuari = sc.nextInt();
+        sc.nextLine();
+        return opcioNumUsuari;
     }
 }
