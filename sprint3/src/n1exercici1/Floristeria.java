@@ -21,12 +21,12 @@ public class Floristeria {
     }
 
     // constructor amb parametres
-    public Floristeria(String id, String nom, ArrayList<Arbre> llistaArbres, ArrayList<Flor> llistaFlors, ArrayList<Decoracio> llistaDecoracions) {
+    public Floristeria(String id, String nom) {
         this.id = id;
         this.nom = nom;
-        this.llistaArbres = llistaArbres;
-        this.llistaFlors = llistaFlors;
-        this.llistaDecoracions = llistaDecoracions;
+        llistaArbres = new ArrayList<>();
+        llistaFlors = new ArrayList<>();
+        llistaDecoracions = new ArrayList<>();
     }
 
     public String getId() {
@@ -68,4 +68,18 @@ public class Floristeria {
     public void setLlistaDecoracions(ArrayList<Decoracio> llistaDecoracions) {
         this.llistaDecoracions = llistaDecoracions;
     }
+
+
+    @Override
+    public String toString() {
+        return "Floristeria{" +
+                "id='" + id + '\'' +
+                ", nom='" + nom + '\'' +
+                ", llistaArbres=" + llistaArbres +
+                ", llistaFlors=" + llistaFlors +
+                ", llistaDecoracions=" + llistaDecoracions +
+                '}';
+    }
+
+
 }
