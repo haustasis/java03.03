@@ -59,26 +59,6 @@ public class Floristeria {
         this.llistaDecoracions = llistaDecoracions;
     }
 
-/*
-    static void printLListaArbres() {
-        for(int i = 0; i < llistaArbres.size(); i++) {
-            System.out.println(llistaArbres.get(i).toString());
-        }
-    }
-    static void printLListaFlors(ArrayList<Flor> llistaFlors) {
-        for(int i = 0; i < llistaFlors.size(); i++) {
-            System.out.println(llistaFlors.get(i).toString());
-        }
-    }
-
-    static void printLListaDecoracions(ArrayList<Decoracio> llistaDecoracions) {
-        for(int i = 0; i < llistaDecoracions.size(); i++) {
-            System.out.println(llistaDecoracions.get(i).toString());
-        }
-    }
-
- */
-
     public int indexArbre(String alzada) {
         int indexArbre = -1;
         int i = 0;
