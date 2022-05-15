@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Floristeria {
 
     // atributs
-    private String id;
+
     private String nom;
     private ArrayList<Arbre> llistaArbres;
     private ArrayList<Flor> llistaFlors;
@@ -13,7 +13,6 @@ public class Floristeria {
 
     // constructor sense parametres
     public Floristeria() {
-        id = "";
         nom = "";
         llistaArbres = new ArrayList<>();
         llistaFlors = new ArrayList<>();
@@ -21,20 +20,11 @@ public class Floristeria {
     }
 
     // constructor amb parametres
-    public Floristeria(String id, String nom) {
-        this.id = id;
+    public Floristeria(String nom) {
         this.nom = nom;
         llistaArbres = new ArrayList<>();
         llistaFlors = new ArrayList<>();
         llistaDecoracions = new ArrayList<>();
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNom() {
@@ -73,13 +63,10 @@ public class Floristeria {
     @Override
     public String toString() {
         return "Floristeria{" +
-                "id='" + id + '\'' +
-                ", nom='" + nom + '\'' +
+                "nom='" + nom + '\'' +
                 ", llistaArbres=" + llistaArbres +
                 ", llistaFlors=" + llistaFlors +
                 ", llistaDecoracions=" + llistaDecoracions +
                 '}';
     }
-
-
 }

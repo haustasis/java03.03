@@ -48,6 +48,7 @@ import java.util.Scanner;
 public class Main {
 
     final static ArrayList<Floristeria> llistaFloristeries = new ArrayList<>();
+    final static ArrayList<Ticket> llistaTickets = new ArrayList<>();
 
     public static void main(String[] args) {
         iniciAppFloristeria();
@@ -69,22 +70,18 @@ public class Main {
                         "1. Crear floristeria \n" +
                         "2. Afegir arbre \n" +
                         "3. Afegir flor \n" +
-                        "3. Afegir decoracio \n" +
-                        "3. Veure stock detallat floristeria \n" +
-                        "3. Retirar arbre \n" +
-                        "4. Retirar flor \n" +
-                        "4. Retirar decoracio \n" +
-                        "4. Veure stock en quantitats \n" +
-                        "4. Veure valor total floristeria \n" +
-                        "5. Crear ticket compra \n" +
-                        "5. Veure llista tickets de compra \n" +
-                        "5. Visualitzar benefici floristeria \n" +
+                        "4. Afegir decoracio \n" +
+                        "5. Veure stock detallat floristeria \n" +
+                        "6. Retirar arbre \n" +
+                        "7. Retirar flor \n" +
+                        "8. Retirar decoracio \n" +
+                        "9. Veure stock en quantitats \n" +
+                        "10. Veure valor total floristeria \n" +
+                        "11. Crear ticket compra \n" +
+                        "12. Veure llista tickets de compra \n" +
+                        "13. Visualitzar benefici floristeria \n" +
                         "0. Sortir aplicacio"
         );
-    }
-
-    private static void operacioGestioFloristeria(int opcioNumUsuari) {
-
     }
 
     static int opcioNumUsuari(String msg) {
@@ -94,5 +91,56 @@ public class Main {
         opcioNumUsuari = sc.nextInt();
         sc.nextLine();
         return opcioNumUsuari;
+    }
+
+    static String opcioStrUsuari(String msg) {
+        System.out.println(msg);
+        String opcioStrUsuari = "";
+        Scanner sc = new Scanner(System.in);
+        opcioStrUsuari = sc.nextLine();
+        return opcioStrUsuari;
+    }
+
+    static int indexFloristeria(String nom) {
+        int indexFloristeria = -1;
+        int i = 0;
+
+        while(indexFloristeria == -1 && i < llistaFloristeries.size()) {
+            if(llistaFloristeries.get(i).getNom().toLowerCase().equals(nom.toLowerCase())) {
+                indexFloristeria = i;
+            }
+            i++;
+        }
+
+        return indexFloristeria;
+    }
+
+
+    static void operacioGestioFloristeria(int opcioNumUsuari) {
+
+        switch(opcioNumUsuari) {
+            case 1:
+                crearFloristeria(
+                        opcioStrUsuari("Introducir nom Floristeria a crear: ")
+                );
+                break;
+            case 0:
+                System.out.println("Sortint de l'aplicació...");
+                break;
+            default:
+                System.out.println("Opción no vàlida, elegir entre 0 - 13");
+
+        }
+    }
+
+    static void crearFloristeria(String nom) {
+
+        if(indexFloristeria(nom) == -1) {
+            Floristeria novaFloristeria = new Floristeria();
+            novaFloristeria.setNom(nom);
+            llistaFloristeries.add(novaFloristeria);
+        } else {
+            System.out.println("La Floristeria " + nom + " ja estava creada.");
+        }
     }
 }

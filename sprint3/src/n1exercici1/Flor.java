@@ -3,7 +3,7 @@ package n1exercici1;
 public class Flor {
 
     private String tipus;
-    private String id;
+
     private String nom;
     private String color;
     private double preuCost;
@@ -11,16 +11,14 @@ public class Flor {
 
     public Flor() {
         tipus = "";
-        id = "";
         nom = "";
         color = "";
         preuCost = 0;
         preuVenda = 0;
     }
 
-    public Flor(String tipus, String id, String nom, String color, double preuCost, double preuVenda) {
+    public Flor(String tipus, String nom, String color, double preuCost, double preuVenda) {
         this.tipus = tipus;
-        this.id = id;
         this.nom = nom;
         this.color = color;
         this.preuCost = preuCost;
@@ -35,13 +33,6 @@ public class Flor {
         this.tipus = tipus;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNom() {
         return nom;
@@ -79,9 +70,8 @@ public class Flor {
     public String toString() {
         return "Flor{" +
                 "tipus='" + tipus + '\'' +
-                ", id='" + id + '\'' +
                 ", nom='" + nom + '\'' +
-                ", color=" + color +
+                ", color='" + color + '\'' +
                 ", preuCost=" + preuCost +
                 ", preuVenda=" + preuVenda +
                 '}';

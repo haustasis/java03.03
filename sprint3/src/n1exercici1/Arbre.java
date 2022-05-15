@@ -3,7 +3,7 @@ package n1exercici1;
 public class Arbre {
 
     private String tipus;
-    private String id;
+
     private String nom;
     private double alzada;
     private double preuCost;
@@ -11,16 +11,14 @@ public class Arbre {
 
     public Arbre() {
         tipus = "";
-        id = "";
         nom = "";
         alzada = 0;
         preuCost = 0;
         preuVenda = 0;
     }
 
-    public Arbre(String tipus, String id, String nom, double alzada, double preuCost, double preuVenda) {
+    public Arbre(String tipus, String nom, double alzada, double preuCost, double preuVenda) {
         this.tipus = tipus;
-        this.id = id;
         this.nom = nom;
         this.alzada = alzada;
         this.preuCost = preuCost;
@@ -35,13 +33,6 @@ public class Arbre {
         this.tipus = tipus;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNom() {
         return nom;
@@ -79,7 +70,6 @@ public class Arbre {
     public String toString() {
         return "Arbre{" +
                 "tipus='" + tipus + '\'' +
-                ", id='" + id + '\'' +
                 ", nom='" + nom + '\'' +
                 ", alzada=" + alzada +
                 ", preuCost=" + preuCost +

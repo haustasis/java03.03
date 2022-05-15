@@ -3,7 +3,7 @@ package n1exercici1;
 public class Decoracio {
 
     private String tipus;
-    private String id;
+
     private String nom;
     private String fustaOplastic;
     private double preuCost;
@@ -11,16 +11,14 @@ public class Decoracio {
 
     public Decoracio() {
         tipus = "";
-        id = "";
         nom = "";
         fustaOplastic = "";
         preuCost = 0;
         preuVenda = 0;
     }
 
-    public Decoracio(String tipus, String id, String nom, String fustaOplastic, double preuCost, double preuVenda) {
+    public Decoracio(String tipus, String nom, String fustaOplastic, double preuCost, double preuVenda) {
         this.tipus = tipus;
-        this.id = id;
         this.nom = nom;
         this.fustaOplastic = fustaOplastic;
         this.preuCost = preuCost;
@@ -35,13 +33,6 @@ public class Decoracio {
         this.tipus = tipus;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNom() {
         return nom;
@@ -79,7 +70,6 @@ public class Decoracio {
     public String toString() {
         return "Decoracio{" +
                 "tipus='" + tipus + '\'' +
-                ", id='" + id + '\'' +
                 ", nom='" + nom + '\'' +
                 ", fustaOplastic='" + fustaOplastic + '\'' +
                 ", preuCost=" + preuCost +
