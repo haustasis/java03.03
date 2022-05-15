@@ -4,25 +4,22 @@ public class Flor {
 
     private String tipus;
 
-    private String nom;
     private String color;
-    private double preuCost;
-    private double preuVenda;
+    private double preu;
+
 
     public Flor() {
-        tipus = "";
-        nom = "";
+        tipus = "flor";
         color = "";
-        preuCost = 0;
-        preuVenda = 0;
+        preu= 0;
+
     }
 
-    public Flor(String tipus, String nom, String color, double preuCost, double preuVenda) {
-        this.tipus = tipus;
-        this.nom = nom;
+    public Flor(String color, double preu) {
+        tipus = "flor";
         this.color = color;
-        this.preuCost = preuCost;
-        this.preuVenda = preuVenda;
+        this.preu = preu;
+
     }
 
     public String getTipus() {
@@ -34,14 +31,6 @@ public class Flor {
     }
 
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
     public String getColor() {
         return color;
     }
@@ -50,30 +39,22 @@ public class Flor {
         this.color = color;
     }
 
-    public double getPreuCost() {
-        return preuCost;
+    public double getPreu() {
+        return preu;
     }
 
-    public void setPreuCost(double preuCost) {
-        this.preuCost = preuCost;
+    public void setPreu(double preu) {
+        this.preu = preu;
     }
 
-    public double getPreuVenda() {
-        return preuVenda;
-    }
 
-    public void setPreuVenda(double preuVenda) {
-        this.preuVenda = preuVenda;
-    }
 
     @Override
     public String toString() {
         return "Flor{" +
                 "tipus='" + tipus + '\'' +
-                ", nom='" + nom + '\'' +
                 ", color='" + color + '\'' +
-                ", preuCost=" + preuCost +
-                ", preuVenda=" + preuVenda +
+                ", preu=" + preu +
                 '}';
     }
 }

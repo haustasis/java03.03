@@ -4,25 +4,20 @@ public class Decoracio {
 
     private String tipus;
 
-    private String nom;
     private String fustaOplastic;
-    private double preuCost;
-    private double preuVenda;
+    private double preu;
 
     public Decoracio() {
-        tipus = "";
-        nom = "";
+        tipus = "decoracio";
         fustaOplastic = "";
-        preuCost = 0;
-        preuVenda = 0;
+        preu = 0;
+
     }
 
-    public Decoracio(String tipus, String nom, String fustaOplastic, double preuCost, double preuVenda) {
-        this.tipus = tipus;
-        this.nom = nom;
+    public Decoracio(String fustaOplastic, double preu) {
+        tipus = "decoracio";
         this.fustaOplastic = fustaOplastic;
-        this.preuCost = preuCost;
-        this.preuVenda = preuVenda;
+        this.preu = preu;
     }
 
     public String getTipus() {
@@ -34,13 +29,6 @@ public class Decoracio {
     }
 
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
 
     public String getFustaOplastic() {
         return fustaOplastic;
@@ -50,30 +38,22 @@ public class Decoracio {
         this.fustaOplastic = fustaOplastic;
     }
 
-    public double getPreuCost() {
-        return preuCost;
+    public double getPreu() {
+        return preu;
     }
 
-    public void setPreuCost(double preuCost) {
-        this.preuCost = preuCost;
+    public void setPreu(double preu) {
+        this.preu = preu;
     }
 
-    public double getPreuVenda() {
-        return preuVenda;
-    }
 
-    public void setPreuVenda(double preuVenda) {
-        this.preuVenda = preuVenda;
-    }
 
     @Override
     public String toString() {
         return "Decoracio{" +
                 "tipus='" + tipus + '\'' +
-                ", nom='" + nom + '\'' +
                 ", fustaOplastic='" + fustaOplastic + '\'' +
-                ", preuCost=" + preuCost +
-                ", preuVenda=" + preuVenda +
+                ", preu=" + preu +
                 '}';
     }
 }

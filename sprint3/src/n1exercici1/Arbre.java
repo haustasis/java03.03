@@ -4,25 +4,22 @@ public class Arbre {
 
     private String tipus;
 
-    private String nom;
-    private double alzada;
-    private double preuCost;
-    private double preuVenda;
+
+    private String alzada;
+    private double preu;
 
     public Arbre() {
-        tipus = "";
-        nom = "";
-        alzada = 0;
-        preuCost = 0;
-        preuVenda = 0;
+        tipus = "arbre";
+        alzada = "";
+        preu = 0;
+
     }
 
-    public Arbre(String tipus, String nom, double alzada, double preuCost, double preuVenda) {
-        this.tipus = tipus;
-        this.nom = nom;
+    public Arbre(String alzada, double preu) {
+        tipus = "arbre";
         this.alzada = alzada;
-        this.preuCost = preuCost;
-        this.preuVenda = preuVenda;
+        this.preu = preu;
+
     }
 
     public String getTipus() {
@@ -34,46 +31,30 @@ public class Arbre {
     }
 
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public double getAlzada() {
+    public String getAlzada() {
         return alzada;
     }
 
-    public void setAlzada(double alzada) {
+    public void setAlzada(String alzada) {
         this.alzada = alzada;
     }
 
-    public double getPreuCost() {
-        return preuCost;
+    public double getPreu() {
+        return preu;
     }
 
-    public void setPreuCost(double preuCost) {
-        this.preuCost = preuCost;
+    public void setPreu(double preu) {
+        this.preu = preu;
     }
 
-    public double getPreuVenda() {
-        return preuVenda;
-    }
 
-    public void setPreuVenda(double preuVenda) {
-        this.preuVenda = preuVenda;
-    }
 
     @Override
     public String toString() {
         return "Arbre{" +
                 "tipus='" + tipus + '\'' +
-                ", nom='" + nom + '\'' +
                 ", alzada=" + alzada +
-                ", preuCost=" + preuCost +
-                ", preuVenda=" + preuVenda +
+                ", preu=" + preu +
                 '}';
     }
 }
